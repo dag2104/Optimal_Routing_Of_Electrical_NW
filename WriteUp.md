@@ -30,3 +30,13 @@ We begin by declaring the required variables which are received from the georefe
 From all the possible transformer locations, we utilize K-Medoids algorithm to find the optimal
 transformer locations (Exact methodology under research).We utilize PRIM’s algorithm to
 determine the optimal connection between the transformers.
+### Step 3: Layer 2 implementation:
+Layer 2 determines the connections between transformer and end users. This is implemented by
+first finding the distances between users and transformers and then applying dijkstra to find the
+nearest transformer from a user and then making connections between the users and connecting
+users to the nearest transformer using PRIM’s algorithm.
+### Step 4: Layer 3 implementation:
+This layer allows us to determine the allocation of the rooftop photo-voltaic panels in the houses.
+First we collect all the coordinates in one array. After that, each house’s rooftop photovoltaic
+contribution is determined and stored in one array. And all the photovoltaic contribution is added
+to the network
